@@ -1,0 +1,6 @@
+C:\Users\EP\OneDrive\Документы\GitHub\EPAM-Training\PetukhovaTask1\bin\Debug\PetukhovaTask1.exe.config
+C:\Users\EP\OneDrive\Документы\GitHub\EPAM-Training\PetukhovaTask1\bin\Debug\PetukhovaTask1.exe
+C:\Users\EP\OneDrive\Документы\GitHub\EPAM-Training\PetukhovaTask1\bin\Debug\PetukhovaTask1.pdb
+C:\Users\EP\OneDrive\Документы\GitHub\EPAM-Training\PetukhovaTask1\obj\Debug\PetukhovaTask1.csproj.CoreCompileInputs.cache
+C:\Users\EP\OneDrive\Документы\GitHub\EPAM-Training\PetukhovaTask1\obj\Debug\PetukhovaTask1.exe
+C:\Users\EP\OneDrive\Документы\GitHub\EPAM-Training\PetukhovaTask1\obj\Debug\PetukhovaTask1.pdb

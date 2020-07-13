@@ -14,16 +14,15 @@ namespace PetukhovaTask1
     class NodEvklid
     {
 
-
         ///<summary>
         ///Метод, реализующий для вычисления НОД
         ///двух целых чисел алгоритм Евклида.
         ///</summary>
         ///<param name="arg1"></param>
         ///<param name="arg2"></param>
-        /// <param name="timeAlive"></param>
+        /// <param name="timeSimpleEvklidAlive"></param>
         ///<returns>НОД, затраченное на расчет время.</returns>        
-        public static int EvklidAlg(int arg1, int arg2, out long timeAlive)
+        public static int EvklidAlg(int arg1, int arg2, out long timeSimpleEvklidAlive)
         {
             Stopwatch stopwatch = new Stopwatch();
             int numb1;
@@ -45,11 +44,11 @@ namespace PetukhovaTask1
             if (numb2 == 0)
             {
                 stopwatch.Stop();
-                timeAlive = stopwatch.ElapsedTicks;
+                timeSimpleEvklidAlive = stopwatch.ElapsedTicks;
                 return numb1;
             }
             else
-                return EvklidAlg(numb2, numb1 % numb2,out timeAlive);      
+                return EvklidAlg(numb2, numb1 % numb2,out timeSimpleEvklidAlive);      
 
         }
 
@@ -59,9 +58,9 @@ namespace PetukhovaTask1
         /// двух целых чисел расширенный алгоритм Евклида.
         /// </summary>
         /// <param name="args"></param>
-        /// <param name="timeAlive"></param>
+        /// <param name="timeManyArgsEvklidAlive"></param>
         /// <returns>НОД, затраченное на расчет время.</returns>
-        public static int EvklidAlg(int[] args,out long timeAlive)
+        public static int EvklidAlg(int[] args,out long timeManyArgsEvklidAlive)
         {
             int i = 1;
             int d = args[0];
@@ -70,7 +69,7 @@ namespace PetukhovaTask1
 
             do
             {
-                d = EvklidAlg(d, args[i],out timeAlive);
+                d = EvklidAlg(d, args[i],out timeManyArgsEvklidAlive);
                 i++;
             }
             while (i != args.Length);
@@ -78,15 +77,16 @@ namespace PetukhovaTask1
             return d;
         }
 
+
         /// <summary>
         /// Метод, реализующий для вычисления НОД
         /// двух целых чисел бинарный алгоритм Евклида.
         /// </summary>
         /// <param name="arg1"></param>
         /// <param name="arg2"></param>
-        /// <param name="timeAlive"></param>
+        /// <param name="timeBinaryEvklidAlive"></param>
         /// <returns>НОД, затраченное на расчет время.</returns>
-        public static int BinaryEvklidAlg(int arg1, int arg2, out long timeAlive)
+        public static int BinaryEvklidAlg(int arg1, int arg2, out long timeBinaryEvklidAlive)
         {
             Stopwatch stopwatch = new Stopwatch();
 
@@ -95,41 +95,47 @@ namespace PetukhovaTask1
             if (arg1 == 0)
             {
                 stopwatch.Stop();
-                timeAlive = stopwatch.ElapsedTicks;
+                timeBinaryEvklidAlive = stopwatch.ElapsedTicks;
                 return arg2;
             }                
 
             if (arg2 == 0 || arg1 == arg2)
             {
                 stopwatch.Stop();
-                timeAlive = stopwatch.ElapsedTicks;
+                timeBinaryEvklidAlive = stopwatch.ElapsedTicks;
                 return arg1;
             }
 
             if (arg1 == 1 || arg2 == 1)
             {
                 stopwatch.Stop();
-                timeAlive = stopwatch.ElapsedTicks;
+                timeBinaryEvklidAlive = stopwatch.ElapsedTicks;
                 return 1;
             }
 
             if (arg1 % 2 == 0 && arg2 % 2 == 0)
-                return 2 * BinaryEvklidAlg(arg1 / 2, arg2 / 2, out timeAlive);
+                return 2 * BinaryEvklidAlg(arg1 / 2, arg2 / 2, out timeBinaryEvklidAlive);
 
             if (arg1 % 2 == 0 && arg2 % 2 != 0)
-                return 2 * BinaryEvklidAlg(arg1 / 2, arg2, out timeAlive);
+                return 2 * BinaryEvklidAlg(arg1 / 2, arg2, out timeBinaryEvklidAlive);
 
             if (arg1 % 2 != 0 && arg2 % 2 == 0)
-                return 2 * BinaryEvklidAlg(arg1, arg2 / 2, out timeAlive);
+                return 2 * BinaryEvklidAlg(arg1, arg2 / 2, out timeBinaryEvklidAlive);
 
             if (arg1 % 2 != 0 && arg2 % 2 != 0)
-                return 2 * BinaryEvklidAlg(arg1, arg2, out timeAlive);
+                return 2 * BinaryEvklidAlg(arg1, arg2, out timeBinaryEvklidAlive);
 
             if (arg1 < arg2)
-                return BinaryEvklidAlg((arg2 - arg1) / 2, arg1, out timeAlive);
-            else return BinaryEvklidAlg((arg1 - arg2) / 2, arg2, out timeAlive);
+                return BinaryEvklidAlg((arg2 - arg1) / 2, arg1, out timeBinaryEvklidAlive);
+            else return BinaryEvklidAlg((arg1 - arg2) / 2, arg2, out timeBinaryEvklidAlive);
 
         }
+
+        public static List<long> CompareAlgorithmTime(long time1, long time2, long time3)
+        {
+
+        }
+
 
         /// <summary>
         /// Метод сортировки входного массива
@@ -153,5 +159,7 @@ namespace PetukhovaTask1
 
             return args;
         }
+
+        private static void 
     }   
 }

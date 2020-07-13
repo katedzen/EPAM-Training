@@ -53,6 +53,11 @@ namespace PetukhovaTask1
             return numb2;
         }
 
+        /// <summary>
+        /// Метод вычесления НОД массива целых чисел
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns>НОД</returns>
         public static int EvklidAlg(int[] args)
         {
             int i = 1;
@@ -60,11 +65,12 @@ namespace PetukhovaTask1
 
             args = SortArgs(args);
 
-            while (i != args.Length)
+            do
             {
                 d = EvklidAlg(d, args[i]);
                 i++;
             }
+            while (i != args.Length);
 
             return d;
         }

@@ -13,7 +13,7 @@ namespace PetukhovaTask1
     /// </summary>
     class NodEvklid
     {
-        
+
 
         ///<summary>
         ///Метод, реализующий для вычисления НОД
@@ -21,11 +21,15 @@ namespace PetukhovaTask1
         ///</summary>
         ///<param name="arg1"></param>
         ///<param name="arg2"></param>
-        ///<returns>НОД</returns>        
-        public static int EvklidAlg(int arg1, int arg2)
+        /// <param name="timeAlive"></param>
+        ///<returns>НОД, затраченное на расчет время.</returns>        
+        public static int EvklidAlg(int arg1, int arg2, out long timeAlive)
         {
+            Stopwatch stopwatch = new Stopwatch();
             int numb1;
             int numb2;
+
+            stopwatch.Start();
 
             if (arg1 >= arg2)
             {
@@ -38,22 +42,15 @@ namespace PetukhovaTask1
                 numb2 = arg1;
             }
 
-            int d = numb1 % numb2;
-
-            do
+            if (numb2 == 0)
             {
-                if (d == 0)
-                    return numb2;
-                else
-                {
-                    numb1 = numb2;
-                    numb2 = d;
-                    d = numb1 % numb2;
-                }
+                stopwatch.Stop();
+                timeAlive = stopwatch.ElapsedTicks;
+                return numb1;
             }
-            while (d != 0);
+            else
+                return EvklidAlg(numb2, numb1 % numb2,out timeAlive);      
 
-            return numb2;
         }
 
 
@@ -62,8 +59,9 @@ namespace PetukhovaTask1
         /// двух целых чисел расширенный алгоритм Евклида.
         /// </summary>
         /// <param name="args"></param>
-        /// <returns>НОД</returns>
-        public static int EvklidAlg(int[] args)
+        /// <param name="timeAlive"></param>
+        /// <returns>НОД, затраченное на расчет время.</returns>
+        public static int EvklidAlg(int[] args,out long timeAlive)
         {
             int i = 1;
             int d = args[0];
@@ -72,7 +70,7 @@ namespace PetukhovaTask1
 
             do
             {
-                d = EvklidAlg(d, args[i]);
+                d = EvklidAlg(d, args[i],out timeAlive);
                 i++;
             }
             while (i != args.Length);
@@ -131,7 +129,6 @@ namespace PetukhovaTask1
                 return BinaryEvklidAlg((arg2 - arg1) / 2, arg1, out timeAlive);
             else return BinaryEvklidAlg((arg1 - arg2) / 2, arg2, out timeAlive);
 
-            
         }
 
         /// <summary>

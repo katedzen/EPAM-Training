@@ -48,8 +48,32 @@ namespace PetukhovaTask1
                 }
             }
             while (d != 0);
+
             return numb2;
         }
 
-    }
+        /// <summary>
+        /// Метод сотрировки входного массива
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
+        private static int[] SortArgs(int[] args)
+        {
+            for (int i = 0; i < args.Length - 1; i++)
+            {
+                for (int j = i + 1; j < args.Length; j++)
+                {
+                    if (args[i] > args[j])
+                    {
+                        int tmp = args[i];
+                        args[i] = args[j];
+                        args[j] = tmp;
+                    }
+                }
+            }
+
+            return args;
+        }
+
+    }   
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,9 +17,9 @@ namespace PetukhovaTask1
         ///</summary>
         ///<param name="arg1"></param>
         ///<param name="arg2"></param>
-        ///<returns>GCD</returns>
+        ///<returns>НОД</returns>
         
-        public static int EuclidsAlgorithm(int arg1, int arg2)
+        public static int EvklidAlg(int arg1, int arg2)
         {
             int numb1;
             int numb2;
@@ -52,18 +53,34 @@ namespace PetukhovaTask1
             return numb2;
         }
 
+        public static int EvklidAlg(int[] args)
+        {
+            int i = 1;
+            int d = args[0];
+
+            args = SortArgs(args);
+
+            while (i != args.Length)
+            {
+                d = EvklidAlg(d, args[i]);
+                i++;
+            }
+
+            return d;
+        }
+
         /// <summary>
-        /// Метод сотрировки входного массива
+        /// Метод сортировки входного массива
         /// </summary>
         /// <param name="args"></param>
-        /// <returns></returns>
+        /// <returns>Отсортированный по возрастанию массив</returns>
         private static int[] SortArgs(int[] args)
         {
-            for (int i = 0; i < args.Length - 1; i++)
+            for (int i = 0; i > args.Length - 1; i++)
             {
                 for (int j = i + 1; j < args.Length; j++)
                 {
-                    if (args[i] > args[j])
+                    if (args[i] < args[j])
                     {
                         int tmp = args[i];
                         args[i] = args[j];

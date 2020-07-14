@@ -9,11 +9,10 @@ using System.Threading.Tasks;
 namespace PetukhovaTask1
 {
     /// <summary>
-    /// Тип, реализующий алгоритм Евклида для вычисления НОД
+    /// Тип, содержащий несколько вариаций алгоритма Евклида для вычисления НОД
     /// </summary>
     class NodEvklid
     {
-
         ///<summary>
         ///Метод, реализующий для вычисления НОД
         ///двух целых чисел алгоритм Евклида.
@@ -24,32 +23,29 @@ namespace PetukhovaTask1
         ///<returns>НОД, затраченное на расчет время.</returns>        
         public static int EvklidAlg(int arg1, int arg2, out long timeSimpleEvklidAlive)
         {
+            CheckParameters(arg1, arg2);
+
             Stopwatch stopwatch = new Stopwatch();
-            int numb1;
-            int numb2;
 
             stopwatch.Start();
 
-            if (arg1 >= arg2)
+            while (arg1 != arg2)
             {
-                numb1 = arg1;
-                numb2 = arg2;
-            }
-            else
-            {
-                numb1 = arg2;
-                numb2 = arg1;
+                if (arg1 > arg2)
+                {
+                    int tmp = arg1;
+                    arg1 = arg2;
+                    arg2 = tmp;
+                }
+
+                arg2 -= arg1;                
             }
 
-            if (numb2 == 0)
-            {
-                stopwatch.Stop();
-                timeSimpleEvklidAlive = stopwatch.ElapsedTicks;
-                return numb1;
-            }
-            else
-                return EvklidAlg(numb2, numb1 % numb2,out timeSimpleEvklidAlive);      
+            stopwatch.Stop();
 
+            timeSimpleEvklidAlive = stopwatch.ElapsedTicks;
+
+            return arg1;
         }
 
 
@@ -62,15 +58,19 @@ namespace PetukhovaTask1
         /// <returns>НОД, затраченное на расчет время.</returns>
         public static int EvklidAlg(int[] args,out long timeManyArgsEvklidAlive)
         {
+            CheckParameters(args);
+
             int i = 1;
             int d = args[0];
+            timeManyArgsEvklidAlive = 0;
 
             args = SortArgs(args);
 
             do
             {
-                d = EvklidAlg(d, args[i],out timeManyArgsEvklidAlive);
+                d = EvklidAlg(d, args[i],out long timeForArgsEvklidAlive);
                 i++;
+                timeManyArgsEvklidAlive += timeForArgsEvklidAlive;
             }
             while (i != args.Length);
 
@@ -88,6 +88,10 @@ namespace PetukhovaTask1
         /// <returns>НОД, затраченное на расчет время.</returns>
         public static int BinaryEvklidAlg(int arg1, int arg2, out long timeBinaryEvklidAlive)
         {
+            CheckParameters(arg1, arg2);
+
+            int result = 1;
+            int tmp;
             Stopwatch stopwatch = new Stopwatch();
 
             stopwatch.Start();
@@ -113,28 +117,54 @@ namespace PetukhovaTask1
                 return 1;
             }
 
-            if (arg1 % 2 == 0 && arg2 % 2 == 0)
-                return 2 * BinaryEvklidAlg(arg1 / 2, arg2 / 2, out timeBinaryEvklidAlive);
+            while (arg1 != 0 || arg2 != 0)
+            {
+                if (arg1 % 2 == 0 && arg2 % 2 == 0)
+                {
+                    result *= 2;
+                    arg1 /= 2;
+                    arg2 /= 2;
+                    continue;
+                }
+                if (arg1 % 2 == 0 && arg2 % 2 != 0)
+                {
+                    arg1 /= 2;
+                    continue;
+                }
+                if (arg1 % 2 != 0 && arg2 % 2 == 0)
+                {
+                    arg2 /= 2;
+                    continue;
+                }
+                if (arg1 > arg2)
+                {
+                    tmp = arg1;
+                    arg1 = arg2;
+                    arg2 = tmp;
+                }
+                tmp = arg1;
+                arg1 = (arg2 - arg1) / 2;
+                arg2 = tmp;                                               
+            }
 
-            if (arg1 % 2 == 0 && arg2 % 2 != 0)
-                return 2 * BinaryEvklidAlg(arg1 / 2, arg2, out timeBinaryEvklidAlive);
-
-            if (arg1 % 2 != 0 && arg2 % 2 == 0)
-                return 2 * BinaryEvklidAlg(arg1, arg2 / 2, out timeBinaryEvklidAlive);
-
-            if (arg1 % 2 != 0 && arg2 % 2 != 0)
-                return 2 * BinaryEvklidAlg(arg1, arg2, out timeBinaryEvklidAlive);
-
-            if (arg1 < arg2)
-                return BinaryEvklidAlg((arg2 - arg1) / 2, arg1, out timeBinaryEvklidAlive);
-            else return BinaryEvklidAlg((arg1 - arg2) / 2, arg2, out timeBinaryEvklidAlive);
-
+            if (arg1 == 0)
+            {
+                stopwatch.Stop();
+                timeBinaryEvklidAlive = stopwatch.ElapsedTicks;
+                return result * arg2;
+            }
+            else
+            {
+                stopwatch.Stop();
+                timeBinaryEvklidAlive = stopwatch.ElapsedTicks;
+                return result * arg1;
+            }
         }
 
-        public static List<long> CompareAlgorithmTime(long time1, long time2, long time3)
-        {
+        //public static List<long> CompareAlgorithmTime(long time1, long time2, long time3)
+        //{
 
-        }
+        //}
 
 
         /// <summary>
@@ -160,6 +190,24 @@ namespace PetukhovaTask1
             return args;
         }
 
-        private static void 
+        /// <summary>
+        /// Метод проверяет аргументы метода,
+        /// в случае, если один из аргументов равен 0,
+        /// создаёт исключение
+        /// </summary>
+        /// <param name="arg1"></param>
+        /// <param name="arg2"></param>
+        private static void CheckParameters( int arg1, int arg2)
+        {
+            if (arg1 == 0 || arg2 ==0)
+                throw new ArgumentException();
+        }
+
+        private static void CheckParameters(int[] args)
+        {
+            foreach (int arg in args)
+                if (arg == 0)
+                    throw new ArgumentException();
+        }
     }   
 }

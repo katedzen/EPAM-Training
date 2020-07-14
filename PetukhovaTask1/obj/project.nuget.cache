@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "HK6IlxtzxE206WBOLlkD59VTzBBLCEX2XwVAfuAjjO6/DoCW1Ayq24bAE7SHMfASbmckBaMsTZ+ina7dnNqPLA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\EP\\Source\\Repos\\katedzen\\EPAM-Training\\PetukhovaTask1\\PetukhovaTask1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\EP\\.nuget\\packages\\mstest.testadapter\\2.1.2\\mstest.testadapter.2.1.2.nupkg.sha512",
+    "C:\\Users\\EP\\.nuget\\packages\\mstest.testframework\\2.1.2\\mstest.testframework.2.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

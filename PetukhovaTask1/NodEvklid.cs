@@ -56,13 +56,12 @@ namespace PetukhovaTask1
         /// <param name="args"></param>
         /// <param name="timeManyArgsEvklidAlive"></param>
         /// <returns>НОД, затраченное на расчет время.</returns>
-        public static int EvklidAlg(int[] args,out long timeManyArgsEvklidAlive)
+        public static int EvklidAlg(int[] args)
         {
             CheckParameters(args);
 
             int i = 1;
             int d = args[0];
-            timeManyArgsEvklidAlive = 0;
 
             args = SortArgs(args);
 
@@ -70,7 +69,6 @@ namespace PetukhovaTask1
             {
                 d = EvklidAlg(d, args[i],out long timeForArgsEvklidAlive);
                 i++;
-                timeManyArgsEvklidAlive += timeForArgsEvklidAlive;
             }
             while (i != args.Length);
 
@@ -161,10 +159,26 @@ namespace PetukhovaTask1
             }
         }
 
-        //public static List<long> CompareAlgorithmTime(long time1, long time2, long time3)
-        //{
 
-        //}
+        /// <summary>
+        /// Метод принимает два аргумента
+        /// для сравнения времени нахождения их НОД 
+        /// двумя доступными способами.
+        /// </summary>
+        /// <param name="arg1"></param>
+        /// <param name="arg2"></param>
+        /// <returns>Время выполнения алгоритмов в порядке убывания</returns>
+        public static List<long> CompareAlgorithmTime(int arg1, int arg2)
+        {
+            EvklidAlg(arg1, arg2, out long timeEvklid);
+
+            BinaryEvklidAlg(arg1, arg2, out long timeBinaryEvklid);
+
+            if (timeEvklid >= timeBinaryEvklid)
+                return new List<long>() { timeEvklid, timeBinaryEvklid };
+            else
+                return new List<long>() { timeBinaryEvklid, timeEvklid };
+        }
 
 
         /// <summary>
@@ -190,9 +204,10 @@ namespace PetukhovaTask1
             return args;
         }
 
+
         /// <summary>
-        /// Метод проверяет аргументы метода,
-        /// в случае, если один из аргументов равен 0,
+        /// Метод проверяет аргументы,
+        /// в случае, если один из них равен 0,
         /// создаёт исключение
         /// </summary>
         /// <param name="arg1"></param>
@@ -203,6 +218,13 @@ namespace PetukhovaTask1
                 throw new ArgumentException();
         }
 
+
+        /// <summary>
+        /// Метод проверяет массив,
+        /// в случае, если один из аргументов в массиве равен 0,
+        /// создаёт исключение
+        /// </summary>
+        /// <param name="args"></param>
         private static void CheckParameters(int[] args)
         {
             foreach (int arg in args)

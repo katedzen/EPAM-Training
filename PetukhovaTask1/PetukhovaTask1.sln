@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetukhovaTask1", "PetukhovaTask1.csproj", "{1916FFEE-87A6-454F-B11D-21C8F3717727}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetukhovaTask1.Tests", "..\PetukhovaTask1.Tests\PetukhovaTask1.Tests.csproj", "{93FDEAF5-0195-431E-BEB1-30EAB6DD5D0D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetukhovaTask1Tests", "..\PetukhovaTask1Tests\PetukhovaTask1Tests.csproj", "{9CF33B3B-4649-4E95-A508-609B5E558CBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{1916FFEE-87A6-454F-B11D-21C8F3717727}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1916FFEE-87A6-454F-B11D-21C8F3717727}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1916FFEE-87A6-454F-B11D-21C8F3717727}.Release|Any CPU.Build.0 = Release|Any CPU
-		{93FDEAF5-0195-431E-BEB1-30EAB6DD5D0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{93FDEAF5-0195-431E-BEB1-30EAB6DD5D0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{93FDEAF5-0195-431E-BEB1-30EAB6DD5D0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{93FDEAF5-0195-431E-BEB1-30EAB6DD5D0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CF33B3B-4649-4E95-A508-609B5E558CBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CF33B3B-4649-4E95-A508-609B5E558CBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CF33B3B-4649-4E95-A508-609B5E558CBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CF33B3B-4649-4E95-A508-609B5E558CBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

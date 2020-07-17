@@ -11,7 +11,7 @@ namespace PetukhovaTask1
     /// <summary>
     /// Тип, содержащий несколько вариаций алгоритма Евклида для вычисления НОД
     /// </summary>
-    class NodEvklid
+    public class NodEvklid
     {
         ///<summary>
         ///Метод, реализующий для вычисления НОД

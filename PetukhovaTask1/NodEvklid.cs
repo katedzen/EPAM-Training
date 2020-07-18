@@ -54,9 +54,9 @@ namespace PetukhovaTask1
         ///<param name="arg2"></param>
         ///<param name="arg3"></param>
         ///<returns>НОД трёх целых чисел.</returns>  
-        public static int EvklidAlg(int arg1, int arg2, int agr3)
+        public static int EvklidAlg(int arg1, int arg2, int arg3)
         {
-            return EvklidAlg((arg1, arg2), arg3);                
+            return EvklidAlg(EvklidAlg(arg1, arg2, out long timeAlive), arg3, out timeAlive);                
         }
 
         ///<summary>
@@ -70,7 +70,7 @@ namespace PetukhovaTask1
         ///<returns>НОД четырёх целых чисел.</returns> 
         public static int EvklidAlg(int arg1, int arg2, int arg3, int arg4)
         {
-            return EvklidAlg(EvklidAlg(arg1, arg2, arg3), arg4);
+            return EvklidAlg(EvklidAlg(arg1, arg2, arg3), arg4, out long timeAlive);
         }
 
         ///<summary>
@@ -85,7 +85,7 @@ namespace PetukhovaTask1
         ///<returns>НОД пяти целых чисел.</returns>
         public static int EvklidAlg(int arg1, int arg2, int arg3, int arg4, int arg5)
         {
-            return EvklidAlg(EvklidAlg(arg1, arg2, arg3, arg4), arg5);
+            return EvklidAlg(EvklidAlg(arg1, arg2, arg3, arg4), arg5, out long timeAlive);
         }
 
         /// <summary>

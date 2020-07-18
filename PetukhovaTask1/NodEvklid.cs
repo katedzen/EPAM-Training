@@ -104,29 +104,28 @@ namespace PetukhovaTask1
 
             stopwatch.Start();
 
-            if (arg1 == 0)
+            do
             {
-                stopwatch.Stop();
-                timeBinaryEvklidAlive = stopwatch.ElapsedTicks;
-                return arg2;
-            }                
+                if (arg1 == 0)
+                {
+                    stopwatch.Stop();
+                    timeBinaryEvklidAlive = stopwatch.ElapsedTicks;
+                    return arg2;
+                }
 
-            if (arg2 == 0 || arg1 == arg2)
-            {
-                stopwatch.Stop();
-                timeBinaryEvklidAlive = stopwatch.ElapsedTicks;
-                return arg1;
-            }
+                if (arg2 == 0 || arg1 == arg2)
+                {
+                    stopwatch.Stop();
+                    timeBinaryEvklidAlive = stopwatch.ElapsedTicks;
+                    return arg1;
+                }
 
-            if (arg1 == 1 || arg2 == 1)
-            {
-                stopwatch.Stop();
-                timeBinaryEvklidAlive = stopwatch.ElapsedTicks;
-                return 1;
-            }
-
-            while (arg1 != 0 || arg2 != 0)
-            {
+                if (arg1 == 1 || arg2 == 1)
+                {
+                    stopwatch.Stop();
+                    timeBinaryEvklidAlive = stopwatch.ElapsedTicks;
+                    return 1;
+                }
                 if (arg1 % 2 == 0 && arg2 % 2 == 0)
                 {
                     result *= 2;
@@ -152,8 +151,9 @@ namespace PetukhovaTask1
                 }
                 tmp = arg1;
                 arg1 = (arg2 - arg1) / 2;
-                arg2 = tmp;                                               
+                arg2 = tmp;
             }
+            while (arg1 != 0 || arg2 != 0);
 
             if (arg1 == 0)
             {
@@ -176,17 +176,30 @@ namespace PetukhovaTask1
         /// </summary>
         /// <param name="arg1"></param>
         /// <param name="arg2"></param>
-        /// <returns>Время выполнения алгоритмов в порядке убывания</returns>
-        public static long[] CompareAlgorithmTime(int arg1, int arg2)
+        /// <param name="statistic">Массив, содержащий время выполнения в порядке убывания</param>
+        /// <returns>Успешно ли провередно сравнение</returns>
+        public static bool CompareAlgorithmTime(int arg1, int arg2, out long[] statistic)
         {
             EvklidAlg(arg1, arg2, out long timeEvklid);
 
             BinaryEvklidAlg(arg1, arg2, out long timeBinaryEvklid);
 
             if (timeEvklid >= timeBinaryEvklid)
-                return new long[] { timeEvklid, timeBinaryEvklid };
+            {
+                statistic = new long[] { timeEvklid, timeBinaryEvklid };
+                return true;
+            }
+            else if (timeEvklid < timeBinaryEvklid)
+            {
+                statistic = new long[] { timeBinaryEvklid, timeEvklid };
+                return true;
+            }
             else
-                return new long[] { timeBinaryEvklid, timeEvklid };
+            {
+                statistic = null;
+                return false;
+            }
+                                
         }        
     }   
 }

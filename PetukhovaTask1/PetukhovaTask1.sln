@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetukhovaTask1", "Petukhova
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetukhovaTask1Tests", "..\PetukhovaTask1Tests\PetukhovaTask1Tests.csproj", "{9CF33B3B-4649-4E95-A508-609B5E558CBB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task1_1", "Task1_1", "{3E747DDD-89D1-421C-8460-DEA948EAFE04}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task1_2", "Task1_2", "{5E43141E-8313-4059-B05F-7EAEEE7B43AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +28,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1916FFEE-87A6-454F-B11D-21C8F3717727} = {3E747DDD-89D1-421C-8460-DEA948EAFE04}
+		{9CF33B3B-4649-4E95-A508-609B5E558CBB} = {3E747DDD-89D1-421C-8460-DEA948EAFE04}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {44EB9FB9-369C-4BE8-875F-34B267AE046D}

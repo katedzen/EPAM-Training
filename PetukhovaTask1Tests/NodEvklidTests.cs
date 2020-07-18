@@ -11,28 +11,6 @@ namespace PetukhovaTask1.Tests
     [TestClass()]
     public class NodEvklidTests
     {
-        [TestMethod()]
-        public void EvklidAlgTest()
-        {
 
-        }
-
-        [TestMethod()]
-        public void EvklidAlgTest1()
-        {
-
-        }
-
-        [TestMethod()]
-        public void BinaryEvklidAlgTest()
-        {
-
-        }
-
-        [TestMethod()]
-        public void CompareAlgorithmTimeTest()
-        {
-
-        }
     }
 }

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace PetukhovaTask1_2
 {
+    /// <summary>
+    /// Тип треугольник.
+    /// </summary>
     public class Triangle : Figure
     {
         public double Side1 { get; set; }
@@ -41,9 +44,9 @@ namespace PetukhovaTask1_2
                         double x2, double y2,
                         double x3, double y3) : base(name)
         {
-            Side1 = Math.Sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
-            Side2 = Math.Sqrt((x3 - x2) * (x3 - x2) + (y3 - y2) * (y3 - y2));
-            Side3 = Math.Sqrt((x3 - x1) * (x3 - x1) + (y3 - y1) * (y3 - y1));
+            Side1 = GetDistance(x1, y1, x2, y2);
+            Side2 = GetDistance(x3, y3, x2, y2);
+            Side3 = GetDistance(x3, y3, x1, y1);
         }
 
         /// <summary>
@@ -72,7 +75,7 @@ namespace PetukhovaTask1_2
         /// <returns>Строковое представление треугольника.</returns>
         public override string ToString()
         {
-            return $"{this.Name} - ({this.Side1}, {this.Side2}, {this.Side3}";
+            return $"{this.Name} - ({this.Side1}, {this.Side2}, {this.Side3})";
         }
 
         /// <summary>

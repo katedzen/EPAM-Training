@@ -9,7 +9,7 @@ namespace PetukhovaTask1_2
 {
     public class FigureReader
     {
-        FigureBase[] figures;
+        public FigureBase[] figures;
         /// <summary>
         /// Конструктор класса. Принимает путь к текстовому файлу,
         /// обрабатывает данные и заполняет массив типа FigureBase. 

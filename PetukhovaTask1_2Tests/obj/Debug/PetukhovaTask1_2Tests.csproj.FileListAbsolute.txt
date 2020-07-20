@@ -1,0 +1,12 @@
+D:\EPAM\katedzen\EPAM-Training\PetukhovaTask1_2Tests\bin\Debug\PetukhovaTask1_2Tests.dll
+D:\EPAM\katedzen\EPAM-Training\PetukhovaTask1_2Tests\bin\Debug\PetukhovaTask1_2Tests.pdb
+D:\EPAM\katedzen\EPAM-Training\PetukhovaTask1_2Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\EPAM\katedzen\EPAM-Training\PetukhovaTask1_2Tests\bin\Debug\PetukhovaTask1_2.exe
+D:\EPAM\katedzen\EPAM-Training\PetukhovaTask1_2Tests\bin\Debug\PetukhovaTask1_2.pdb
+D:\EPAM\katedzen\EPAM-Training\PetukhovaTask1_2Tests\bin\Debug\PetukhovaTask1_2.exe.config
+D:\EPAM\katedzen\EPAM-Training\PetukhovaTask1_2Tests\bin\Debug\ru\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+D:\EPAM\katedzen\EPAM-Training\PetukhovaTask1_2Tests\obj\Debug\PetukhovaTask1_2Tests.csprojAssemblyReference.cache
+D:\EPAM\katedzen\EPAM-Training\PetukhovaTask1_2Tests\obj\Debug\PetukhovaTask1_2Tests.csproj.CoreCompileInputs.cache
+D:\EPAM\katedzen\EPAM-Training\PetukhovaTask1_2Tests\obj\Debug\PetukhovaTask1_2Tests.csproj.CopyComplete
+D:\EPAM\katedzen\EPAM-Training\PetukhovaTask1_2Tests\obj\Debug\PetukhovaTask1_2Tests.dll
+D:\EPAM\katedzen\EPAM-Training\PetukhovaTask1_2Tests\obj\Debug\PetukhovaTask1_2Tests.pdb

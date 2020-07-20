@@ -9,7 +9,7 @@ namespace PetukhovaTask1_2
     /// <summary>
     /// Тип окружность.
     /// </summary>
-    class Circle : Figure
+    class Circle : FigureBase
     {
         public double CentrX { get; set; }
         public double CentrY { get; set; }

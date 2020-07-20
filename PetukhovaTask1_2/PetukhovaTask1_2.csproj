@@ -43,12 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Circle.cs" />
-    <Compile Include="Figure.cs" />
+    <Compile Include="FigureReader.cs" />
+    <Compile Include="Figures\Circle.cs" />
+    <Compile Include="FigureBase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Quadrangle.cs" />
-    <Compile Include="Triangle.cs" />
+    <Compile Include="Figures\Quadrangle.cs" />
+    <Compile Include="Figures\Triangle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

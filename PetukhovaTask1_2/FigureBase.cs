@@ -9,7 +9,7 @@ namespace PetukhovaTask1_2
     ///<summary>
     ///Базовый класс фигура.
     ///</summary>
-    public abstract class Figure
+    public abstract class FigureBase
     {
         /// <summary>
         /// Название фигуры
@@ -20,7 +20,7 @@ namespace PetukhovaTask1_2
         /// Создать новый экземпляр фигуры
         /// </summary>
         /// <param name="name"></param>
-        public Figure (string name)
+        public FigureBase (string name)
         {
             if (string.IsNullOrEmpty(name))
             {

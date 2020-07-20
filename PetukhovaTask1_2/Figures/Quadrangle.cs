@@ -9,7 +9,7 @@ namespace PetukhovaTask1_2
     /// <summary>
     /// Тип четырёхугольник.
     /// </summary>
-    class Quadrangle : Figure
+    class Quadrangle : FigureBase
     {
         public double Side1 { get; set; }
         public double Side2 { get; set; }

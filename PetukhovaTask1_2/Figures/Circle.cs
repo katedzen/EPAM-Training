@@ -92,12 +92,12 @@ namespace PetukhovaTask1_2
 
         /// <summary>
         /// Возвращает некоторое числовое значение,
-        /// соответствующее площади данного объекта.
+        /// соответствующее данному объекту.
         /// </summary>
-        /// <returns>Хэш-код для значения площади фигуры.</returns>
+        /// <returns>Хэш-код фигуры.</returns>
         public override int GetHashCode()
         {
-            return this.Area().GetHashCode();
+            return Tuple.Create(CentrX, CentrY, Radius).GetHashCode();
         }
     }
 }

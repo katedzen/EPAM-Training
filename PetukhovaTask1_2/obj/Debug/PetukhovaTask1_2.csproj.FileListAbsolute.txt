@@ -1,0 +1,2 @@
+C:\Users\EP\Source\Repos\katedzen\EPAM-Training\PetukhovaTask1_2\obj\Debug\PetukhovaTask1_2.csprojAssemblyReference.cache
+C:\Users\EP\Source\Repos\katedzen\EPAM-Training\PetukhovaTask1_2\obj\Debug\PetukhovaTask1_2.csproj.CoreCompileInputs.cache

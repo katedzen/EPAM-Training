@@ -9,7 +9,7 @@ namespace PetukhovaTask1_2
     /// <summary>
     /// Тип треугольник.
     /// </summary>
-    public class Triangle : Figure
+    public class Triangle : FigureBase
     {
         public double Side1 { get; set; }
         public double Side2 { get; set; }

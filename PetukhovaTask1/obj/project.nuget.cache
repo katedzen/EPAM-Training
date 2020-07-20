@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "z8Ld8v6O9yuYTtTBVgnkBpvv+vp/+n4+S5xXmRRUnOgSTY2IgjWd9XnzzgSncoleuBZzCZkljSZshzrrF5PYMA==",
+  "dgSpecHash": "HK6IlxtzxE206WBOLlkD59VTzBBLCEX2XwVAfuAjjO6/DoCW1Ayq24bAE7SHMfASbmckBaMsTZ+ina7dnNqPLA==",
   "success": true,
-  "projectFilePath": "D:\\EPAM\\katedzen\\EPAM-Training\\PetukhovaTask1\\PetukhovaTask1.csproj",
+  "projectFilePath": "C:\\Users\\EP\\Source\\Repos\\katedzen\\EPAM-Training\\PetukhovaTask1\\PetukhovaTask1.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\kated\\.nuget\\packages\\mstest.testadapter\\2.1.2\\mstest.testadapter.2.1.2.nupkg.sha512",
-    "C:\\Users\\kated\\.nuget\\packages\\mstest.testframework\\2.1.2\\mstest.testframework.2.1.2.nupkg.sha512"
+    "C:\\Users\\EP\\.nuget\\packages\\mstest.testadapter\\2.1.2\\mstest.testadapter.2.1.2.nupkg.sha512",
+    "C:\\Users\\EP\\.nuget\\packages\\mstest.testframework\\2.1.2\\mstest.testframework.2.1.2.nupkg.sha512"
   ],
   "logs": []
 }

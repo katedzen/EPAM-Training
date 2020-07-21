@@ -10,7 +10,8 @@ namespace PetukhovaTask1_2
     {
         static void Main(string[] args)
         {
-
+            FigureReader fReader = new FigureReader("../figures.txt"); 
+            
         }
     }
 }

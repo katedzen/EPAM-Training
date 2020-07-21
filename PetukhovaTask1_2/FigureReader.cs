@@ -59,7 +59,7 @@ namespace PetukhovaTask1_2
                         double[] x = new double[3];
                         double[] y = new double[3];
 
-                        for (i = 1, j = i - 1; i < sFigure.Length; i++)
+                        for (i = 1; i < sFigure.Length; i++)
                         {                            
                             sFigure[i].Trim(new char[] { '(', ')' });
                             string[] point = sFigure[i].Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
@@ -82,7 +82,7 @@ namespace PetukhovaTask1_2
                         double[] x = new double[4];
                         double[] y = new double[4];
 
-                        for (i = 1, j = i - 1; i < sFigure.Length; i++)
+                        for (i = 1; i < sFigure.Length; i++)
                         {
                             sFigure[i].Trim(new char[] { '(', ')' });
                             string[] point = sFigure[i].Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
@@ -90,7 +90,7 @@ namespace PetukhovaTask1_2
                                 continue;
                         }
 
-                        figures[i] = (FigureBase)new Quadrangle(name, points[0], points[1], points[2], points[3], points[4], points[5], points[6], points[7]);
+                        figures[i] = (FigureBase)new Quadrangle(name, x[0], y[0], x[1], y[1], x[2], y[2], x[3], y[3]);
                     }
                     else if (Double.TryParse(sFigure[1], out double side1) && Double.TryParse(sFigure[2], out double side2)
                         && Double.TryParse(sFigure[3], out double side3) && Double.TryParse(sFigure[5], out double side4))

@@ -255,26 +255,21 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kated\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\EP\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\EPAM\\katedzen\\EPAM-Training\\PetukhovaTask1\\PetukhovaTask1.csproj",
+      "projectUniqueName": "C:\\Users\\EP\\Source\\Repos\\katedzen\\EPAM-Training\\PetukhovaTask1\\PetukhovaTask1.csproj",
       "projectName": "PetukhovaTask1",
-      "projectPath": "D:\\EPAM\\katedzen\\EPAM-Training\\PetukhovaTask1\\PetukhovaTask1.csproj",
-      "packagesPath": "C:\\Users\\kated\\.nuget\\packages\\",
-      "outputPath": "D:\\EPAM\\katedzen\\EPAM-Training\\PetukhovaTask1\\obj\\",
+      "projectPath": "C:\\Users\\EP\\Source\\Repos\\katedzen\\EPAM-Training\\PetukhovaTask1\\PetukhovaTask1.csproj",
+      "packagesPath": "C:\\Users\\EP\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\EP\\Source\\Repos\\katedzen\\EPAM-Training\\PetukhovaTask1\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\kated\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\EP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net48"

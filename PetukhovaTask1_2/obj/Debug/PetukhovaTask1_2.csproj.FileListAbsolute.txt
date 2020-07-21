@@ -1,4 +1,3 @@
-C:\Users\EP\Source\Repos\katedzen\EPAM-Training\PetukhovaTask1_2\obj\Debug\PetukhovaTask1_2.csprojAssemblyReference.cache
 C:\Users\EP\Source\Repos\katedzen\EPAM-Training\PetukhovaTask1_2\obj\Debug\PetukhovaTask1_2.csproj.CoreCompileInputs.cache
 D:\EPAM\katedzen\EPAM-Training\PetukhovaTask1_2\bin\Debug\PetukhovaTask1_2.exe.config
 D:\EPAM\katedzen\EPAM-Training\PetukhovaTask1_2\bin\Debug\PetukhovaTask1_2.exe
@@ -8,3 +7,9 @@ D:\EPAM\katedzen\EPAM-Training\PetukhovaTask1_2\obj\Debug\PetukhovaTask1_2.cspro
 D:\EPAM\katedzen\EPAM-Training\PetukhovaTask1_2\obj\Debug\PetukhovaTask1_2.exe
 D:\EPAM\katedzen\EPAM-Training\PetukhovaTask1_2\obj\Debug\PetukhovaTask1_2.pdb
 D:\EPAM\katedzen\EPAM-Training\PetukhovaTask1_2\obj\Debug\PetukhovaTask1_2.g.resources
+C:\Users\EP\Source\Repos\katedzen\EPAM-Training\PetukhovaTask1_2\obj\Debug\PetukhovaTask1_2.g.resources
+C:\Users\EP\Source\Repos\katedzen\EPAM-Training\PetukhovaTask1_2\obj\Debug\PetukhovaTask1_2.exe
+C:\Users\EP\Source\Repos\katedzen\EPAM-Training\PetukhovaTask1_2\obj\Debug\PetukhovaTask1_2.pdb
+C:\Users\EP\Source\Repos\katedzen\EPAM-Training\PetukhovaTask1_2\bin\Debug\PetukhovaTask1_2.exe.config
+C:\Users\EP\Source\Repos\katedzen\EPAM-Training\PetukhovaTask1_2\bin\Debug\PetukhovaTask1_2.exe
+C:\Users\EP\Source\Repos\katedzen\EPAM-Training\PetukhovaTask1_2\bin\Debug\PetukhovaTask1_2.pdb

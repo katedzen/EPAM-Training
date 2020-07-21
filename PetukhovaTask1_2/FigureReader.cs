@@ -17,11 +17,19 @@ namespace PetukhovaTask1_2
         /// <param name="path">Путь к тхт файлу.</param>
         public FigureReader(string path)
         {
-            string[] lineArray = (string[])File.ReadLines(path);
+            var textLines = File.ReadLines(path);
+            string[] lineArray = new string[textLines.Count()];
 
+            int i = 0;
+            foreach (var line in textLines) 
+            {
+                lineArray[i] = line;
+                i++;
+            }
+                
             figures = new FigureBase[lineArray.Length];
 
-            for (int i = 0; i < lineArray.Length; i++)
+            for (i = 0; i < lineArray.Length; i++)
             {
                 string[] sFigure = lineArray[i].Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
 
@@ -49,9 +57,8 @@ namespace PetukhovaTask1_2
                     if (sFigure[1].Contains("("))
                     {
                         double[] points = new double[6];
-                        int j = 0;
-
-                        for (i = 1; i < sFigure.Length; i++)
+                        int j;
+                        for (i = 1, j = i - 1; i < sFigure.Length; i++)
                         {                            
                             sFigure[i].Trim(new char[] { '(', ')' });
                             string[] point = sFigure[i].Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
@@ -75,7 +82,7 @@ namespace PetukhovaTask1_2
                     if (sFigure[1].Contains("("))
                     {
                         double[] points = new double[8];
-                        for (i = 1; i < sFigure.Length; i++)
+                        for (i = 1, j = i - 1; i < sFigure.Length; i++)
                         {
                             sFigure[i].Trim(new char[] { '(', ')' });
                             string[] point = sFigure[i].Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
@@ -83,8 +90,7 @@ namespace PetukhovaTask1_2
                             {
                                 j++;
                                 continue;
-                            }
-                                
+                            }                                
                         }
 
                         figures[i] = (FigureBase)new Quadrangle(name, points[0], points[1], points[2], points[3], points[4], points[5], points[6], points[7]);

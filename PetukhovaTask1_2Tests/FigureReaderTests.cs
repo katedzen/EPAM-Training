@@ -14,7 +14,7 @@ namespace PetukhovaTask1_2.Tests
         [TestMethod()]
         public void FindEqualsFigures_figuresSet_lenqthEqual8Waiting()
         {
-            FigureReader fReader = new FigureReader("figures.txt");
+            FigureReader fReader = new FigureReader("pack://application:,,,/PetukhovaTask1;component/figures.txt");
 
             int count = fReader.figures.Length;
 

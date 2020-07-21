@@ -7,3 +7,4 @@ D:\EPAM\katedzen\EPAM-Training\PetukhovaTask1_2\obj\Debug\PetukhovaTask1_2.cspro
 D:\EPAM\katedzen\EPAM-Training\PetukhovaTask1_2\obj\Debug\PetukhovaTask1_2.csproj.CoreCompileInputs.cache
 D:\EPAM\katedzen\EPAM-Training\PetukhovaTask1_2\obj\Debug\PetukhovaTask1_2.exe
 D:\EPAM\katedzen\EPAM-Training\PetukhovaTask1_2\obj\Debug\PetukhovaTask1_2.pdb
+D:\EPAM\katedzen\EPAM-Training\PetukhovaTask1_2\obj\Debug\PetukhovaTask1_2.g.resources
